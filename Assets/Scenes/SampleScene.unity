@@ -760,6 +760,8 @@ GameObject:
   - component: {fileID: 571576363}
   - component: {fileID: 571576362}
   - component: {fileID: 571576367}
+  - component: {fileID: 571576369}
+  - component: {fileID: 571576368}
   m_Layer: 0
   m_Name: Video Plane
   m_TagString: Untagged
@@ -859,8 +861,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571576361}
-  m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: 0.0059999824, y: 3.12, z: 9.27}
+  m_LocalRotation: {x: -1.3920947e-15, y: -0.7071068, z: 0.7071068, w: -1.3920947e-15}
+  m_LocalPosition: {x: 0.0059999824, y: 3.12, z: 8.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -879,6 +881,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5a9ca48283fb543aa1aec7fd0d9bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &571576368
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571576361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!320 &571576369
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571576361}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 683b8cb4705ab094796a88fa6f3caa02, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 8812482876185074086, guid: 683b8cb4705ab094796a88fa6f3caa02, type: 2}
+    value: {fileID: 571576368}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
