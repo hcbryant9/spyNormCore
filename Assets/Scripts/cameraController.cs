@@ -7,7 +7,11 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         webcamTexture = new WebCamTexture();
-        GetComponent<Renderer>().material.mainTexture = webcamTexture;
-        webcamTexture.Play();
+        if (webcamTexture != null)
+        {
+            GetComponent<Renderer>().material.mainTexture = webcamTexture;
+            webcamTexture.Play();
+        }
+        
     }
 }
