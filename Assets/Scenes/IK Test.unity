@@ -2819,7 +2819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270886160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00037920475, y: 1.25, z: 3.94}
+  m_LocalPosition: {x: -0.00037920475, y: -0.43, z: 3.94}
   m_LocalScale: {x: 4.1409974, y: 4.747305, z: -0.1040575}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3040,7 +3040,7 @@ Transform:
   m_GameObject: {fileID: 1505110396}
   m_LocalRotation: {x: -2.0977102e-18, y: 3.2128675e-13, z: 1.4358979e-22, w: 1}
   m_LocalPosition: {x: -1.0842021e-21, y: 0, z: -1.110223e-18}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2026195328}
@@ -4250,6 +4250,8 @@ GameObject:
   - component: {fileID: 2019995524}
   - component: {fileID: 2019995523}
   - component: {fileID: 2019995527}
+  - component: {fileID: 2019995528}
+  - component: {fileID: 2019995529}
   m_Layer: 0
   m_Name: Formal_With Mustache_Base
   m_TagString: Untagged
@@ -4373,8 +4375,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019995522}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: a45b7e374556c174ba757eeffc0aa78c, type: 3}
+  m_Controller: {fileID: 9100000, guid: fda2d88829ca6b24594ea9d6d686f836, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4432,6 +4434,37 @@ MonoBehaviour:
     rigTarget: {fileID: 1698807070}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 90, y: 0, z: 0}
+--- !u!114 &2019995528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019995522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa434a152867c7429afe952b4675b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footOffset: {x: 0, y: 0, z: 0}
+  rightFootPosWeight: 1
+  leftFootPosWeight: 1
+  rightFootRotWeight: 1
+  leftFootRotWeight: 1
+--- !u!114 &2019995529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019995522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e84ca6f764db0444b70bc1b808b039d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedThreshold: 0.1
+  smoothing: 1
 --- !u!1 &2026195327
 GameObject:
   m_ObjectHideFlags: 0
