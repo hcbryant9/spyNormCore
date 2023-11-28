@@ -263,7 +263,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 9141186315229158502, guid: a45b7e374556c174ba757eeffc0aa78c, type: 3}
   m_Bones:
@@ -1758,7 +1758,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f06f2ca0089110c40956afd3aba306d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2819,7 +2819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270886160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00037920475, y: 0.33, z: 3.94}
+  m_LocalPosition: {x: -0.00037920475, y: 1.25, z: 3.94}
   m_LocalScale: {x: 4.1409974, y: 4.747305, z: -0.1040575}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3186,7 +3186,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 5247609468605194102, guid: a45b7e374556c174ba757eeffc0aa78c, type: 3}
   m_Bones:
@@ -3568,7 +3568,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -423947161757352938, guid: a45b7e374556c174ba757eeffc0aa78c, type: 3}
   m_Bones:
@@ -4394,7 +4394,7 @@ Transform:
   m_GameObject: {fileID: 2019995522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4231, y: 2.4231, z: 2.4231}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 240412356}
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   head:
     vrTarget: {fileID: 1151158913}
     rigTarget: {fileID: 1950271981}
-    trackingPositionOffset: {x: 0, y: -0.2, z: -0.3}
+    trackingPositionOffset: {x: 0, y: -0.15, z: -0.2}
     trackingRotationOffset: {x: 0, y: 0, z: 0}
   lefthand:
     vrTarget: {fileID: 1235084410}

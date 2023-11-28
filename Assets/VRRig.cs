@@ -24,7 +24,7 @@ public class VRRig : MonoBehaviour
     public VRMap head;
     public VRMap lefthand;
     public VRMap righthand;
-
+    
     void Start()
     {
         headBodyOffset = transform.position - headConstraint.position;   
