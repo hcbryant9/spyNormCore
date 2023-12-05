@@ -4,15 +4,34 @@ using TMPro;
 public class PlayerNamesCollision : MonoBehaviour
 {
     public TextMeshProUGUI textMeshProText;
-    public string newTextOnTrigger = "New Text On Trigger";
+    public AudioClip collisionSound;
+
+    private int collisionCounter = 0;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hand"))
         {
+            collisionCounter++;
+
             if (textMeshProText != null)
             {
-                textMeshProText.text = newTextOnTrigger;
+                textMeshProText.text = "New Text On Trigger " + collisionCounter.ToString();
+            }
+
+            if (collisionSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(collisionSound);
             }
         }
     }
