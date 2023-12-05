@@ -8,14 +8,14 @@ public class AsyncSceneLoader : MonoBehaviour
     [SerializeField] private Realtime realtime;
     [SerializeField] private string roomName;
     [SerializeField] private int sceneIndex;
-
+    
     private bool isLoading;
 
     public void LoadScene()
     {
         if (isLoading) return;
         isLoading = true;
-
+        
         StartCoroutine(LoadSceneAsync());
 
     }
