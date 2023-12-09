@@ -10,7 +10,7 @@ public class lazerControl : MonoBehaviour
 
     public void FireWeapon()
     {
-        GameObject bullet = Realtime.Instantiate(bulletName, launchPoint.position, launchPoint.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(launchPoint.forward*firePower);
+       // GameObject bullet = Realtime.Instantiate(bulletName, launchPoint.position, launchPoint.rotation);
+        //bullet.GetComponent<Rigidbody>().AddForce(launchPoint.forward*firePower);
     }
 }
