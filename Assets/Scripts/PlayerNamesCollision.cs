@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
-
+using Normal.Realtime;
 public class PlayerNamesCollision : MonoBehaviour
 {
     public TextMeshProUGUI textMeshProText;
     public AudioClip collisionSound;
 
-    private int collisionCounter = 0;
+    //private int collisionCounter = 0;
     private AudioSource audioSource;
+    public Realtime realtime;
 
     void Start()
     {
@@ -22,11 +23,12 @@ public class PlayerNamesCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hand"))
         {
-            collisionCounter++;
+            //collisionCounter++;
 
             if (textMeshProText != null)
             {
-                textMeshProText.text = "New Text On Trigger " + collisionCounter.ToString();
+                Debug.Log(realtime.clientID);
+                textMeshProText.text = "Player Id " + realtime.clientID;
             }
 
             if (collisionSound != null && audioSource != null)
