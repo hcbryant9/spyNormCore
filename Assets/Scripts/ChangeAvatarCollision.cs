@@ -4,25 +4,19 @@ using UnityEngine;
 using Normal.Realtime;
 public class ChangeAvatarCollision : MonoBehaviour
 {
-    public RealtimeAvatarManager avatarManager;
-    public GameObject avatar;
-    void Start()
-    {
-        
-    }
+    [SerializeField] private RealtimeAvatarManager avatarManager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject avatar;
+
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hand"))
         {
-            //register avatar?
-            //change the local avatar prefab
+
+            //get avatar manager component from player
+            avatarManager = other.transform.root.GetComponent<RealtimeAvatarManager>();
+
             avatarManager.localAvatarPrefab = avatar;
         }
     }
