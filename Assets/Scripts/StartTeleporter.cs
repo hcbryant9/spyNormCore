@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class StartTeleporter : MonoBehaviour
 {
-    
+
     //public AudioClip collisionSound;
 
 
-    
-    public Realtime realtime;
+
+    [SerializeField] private Realtime realtime;
     private int clientid;
     private bool isLoading;
 
@@ -45,25 +45,19 @@ public class StartTeleporter : MonoBehaviour
         }
     }
 
-    IEnumerator LoadSceneAsync(string scene)
-    {
-        realtime.Disconnect();
-        realtime = null;
-
-        var loadAsync = SceneManager.LoadSceneAsync(realtime.clientID + 1);
-
-        //wait for it to finish
-        while (!loadAsync.isDone) yield return null;
-
-        realtime.Connect(scene);
-        isLoading = false;
-    }
-    private void LoadScene(string scene)
+    public void LoadScene(string scene)
     {
         if (isLoading) return;
         isLoading = true;
+        //disconnect from current room
+        realtime.Disconnect();
+        realtime = null;
 
-        StartCoroutine(LoadSceneAsync(scene));
+        SceneManager.LoadScene(scene);
 
+        realtime = FindObjectOfType<Realtime>();
+        realtime.Connect(scene);
+
+        isLoading = false;
     }
 }
