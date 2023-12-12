@@ -1,9 +1,9 @@
 using UnityEngine;
-
+using TMPro;
 public class HandGestureController : MonoBehaviour
 {
     public GameObject checklistCanvas;
-
+    public TextMeshProUGUI textMeshProText;
     // Threshold for determining if the hand is facing up (close to 180 in Z rotation)
     public float upRotationThreshold = 10f; // Adjust as needed
 
@@ -11,6 +11,7 @@ public class HandGestureController : MonoBehaviour
     void Start()
     {
         checklistCanvas.SetActive(false);
+        changeText("open the brief case");
     }
     void Update()
     {
@@ -34,5 +35,10 @@ public class HandGestureController : MonoBehaviour
     {
         // Check if the rotation indicates the hand is facing up
         return Mathf.Abs(rotationZ - 180f) < upRotationThreshold;
+    }
+    public void changeText(string text)
+    {
+        textMeshProText.text = "";
+        textMeshProText.text = text;
     }
 }

@@ -42,42 +42,7 @@ public class ChangeAvatarCollision : MonoBehaviour
     private float lastTriggerTime = 0f;
     private float cooldownDuration = 5f; // 5 seconds cooldown
 
-    private void Update()
-    {
-        /* 
-        if (!findAvatar)
-        {
-            if (realtime.clientID == 0)
-            {
-                player = GameObject.Find("no shirt(Clone)");
-                if (player != null)
-                {
-                    Debug.Log("calling the function");
-                    ConfigurationofAvatar();
-                    Debug.Log("found avatar for player with client id 0");
-                    findAvatar = true; // Stop further updates
-                }
-            }
-            else if (realtime.clientID == 1)
-            {
-                player = GameObject.Find("no shirt(Clone)");
-                if (player != null)
-                {
-                    ConfigurationofAvatar();
-                    Debug.Log("found avatar for player with client id 1");
-                    findAvatar = true; // Stop further updates
-                }
-            }
-            else if (realtime.clientID == 2)
-            {
-                findAvatar = true; // Stop further updates for client ID 2
-            }
-
-        }
-
-         */
-    }
-
+    
 
 
 
