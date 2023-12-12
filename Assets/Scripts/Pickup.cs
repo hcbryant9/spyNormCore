@@ -5,7 +5,7 @@ public class Pickup : MonoBehaviour
 {
     public bool shouldCollect = true; // Boolean to define if the object should be collected
     public AudioController audioController;
-
+    public RoomSceneManager roomSceneManager;
 
 
     void OnTriggerEnter(Collider other)
@@ -30,7 +30,10 @@ public class Pickup : MonoBehaviour
             {
                 Debug.Log("audio controller is null");
             }
-
+            if (gameObject.CompareTag("headphones"))
+            {
+                roomSceneManager.headphonesOn();
+            }
             gameObject.SetActive(false);
         }
     }

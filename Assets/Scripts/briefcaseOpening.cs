@@ -5,6 +5,7 @@ public class briefcaseOpening : MonoBehaviour
     private Transform briefcaseLid; // Reference to the briefcase lid transform
     public float openingAngle = 90f; // Angle to open the briefcase
     public float openingSpeed = 2f; // Speed of the opening animation
+    public AudioController audioController;
 
     private bool isOpening = false;
     private bool hasBeenOpened = false;
@@ -35,6 +36,7 @@ public class briefcaseOpening : MonoBehaviour
         if (other.gameObject.CompareTag("Hand") && !hasBeenOpened)
         {
             isOpening = true;
+            audioController.PlayBriefcase();
             hasBeenOpened = true; // Set the flag to true once the briefcase is opened
         }
     }

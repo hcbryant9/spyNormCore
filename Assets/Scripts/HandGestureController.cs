@@ -11,7 +11,7 @@ public class HandGestureController : MonoBehaviour
     void Start()
     {
         checklistCanvas.SetActive(false);
-        changeText("open the brief case");
+        
     }
     void Update()
     {

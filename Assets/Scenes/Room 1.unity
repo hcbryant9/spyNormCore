@@ -2371,6 +2371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldCollect: 1
   audioController: {fileID: 1313089564}
+  roomSceneManager: {fileID: 0}
 --- !u!64 &443493973
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2756,8 +2757,8 @@ GameObject:
   - component: {fileID: 519266405}
   - component: {fileID: 519266409}
   m_Layer: 0
-  m_Name: headpgones
-  m_TagString: Untagged
+  m_Name: headphones
+  m_TagString: headphones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2891,6 +2892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldCollect: 1
   audioController: {fileID: 1313089564}
+  roomSceneManager: {fileID: 1524481757}
 --- !u!1001 &521167818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11007,7 +11009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingAngle: 90
-  openingSpeed: 25
+  openingSpeed: 40
+  audioController: {fileID: 1313089564}
 --- !u!65 &1256074079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11316,8 +11319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658c1ac2f6364df45afa390424920e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headphones: {fileID: 8300000, guid: 9d87094e44089da4e96d853de3eb7e98, type: 3}
-  briefcase: {fileID: 8300000, guid: fcbab1cbc7029bb408d9820bdb54cfc5, type: 3}
+  headphones: {fileID: 8300000, guid: 013e7c73818e3704b8ac75a3bcbd075e, type: 3}
+  briefcase: {fileID: 8300000, guid: 4ebc2fe34bac27b4bb980cd71e04e5dd, type: 3}
 --- !u!82 &1313089565
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11555,53 +11558,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8137182552048294931, guid: f386ca1db8715ae44b90a1410b94c8c4, type: 3}
---- !u!1 &1380133495
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1380133496}
-  - component: {fileID: 1380133497}
-  m_Layer: 0
-  m_Name: HandGestureControls
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1380133496
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380133495}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9194136, y: -0.96821296, z: -0.119289875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1523108351}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1380133497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380133495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec3e59524e7d85d4da9ce0e18fb1428c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checklistCanvas: {fileID: 300098473}
-  textMeshProText: {fileID: 683498634}
-  upRotationThreshold: 10
 --- !u!64 &1383049837
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12120,9 +12076,69 @@ Transform:
   - {fileID: 1673809113}
   - {fileID: 1263652420}
   - {fileID: 1778314779}
-  - {fileID: 1380133496}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1524481755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524481758}
+  - component: {fileID: 1524481757}
+  - component: {fileID: 1524481756}
+  m_Layer: 0
+  m_Name: Room 1 Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1524481756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524481755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3e59524e7d85d4da9ce0e18fb1428c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checklistCanvas: {fileID: 300098473}
+  textMeshProText: {fileID: 683498634}
+  upRotationThreshold: 10
+--- !u!114 &1524481757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524481755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27eb93b97965c98428aff371392d52c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handGestureController: {fileID: 0}
+--- !u!4 &1524481758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524481755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1922075, y: 1.7198341, z: 5.9621634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1532753290
 MeshCollider:
