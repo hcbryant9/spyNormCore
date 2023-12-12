@@ -7,6 +7,8 @@ public class briefcaseOpening : MonoBehaviour
     public float openingSpeed = 2f; // Speed of the opening animation
     public AudioController audioController;
 
+    public RoomSceneManager roomSceneManager;
+
     private bool isOpening = false;
     private bool hasBeenOpened = false;
     private Quaternion initialRotation;
@@ -37,6 +39,7 @@ public class briefcaseOpening : MonoBehaviour
         {
             isOpening = true;
             audioController.PlayBriefcase();
+            roomSceneManager.displayPamphlets();
             hasBeenOpened = true; // Set the flag to true once the briefcase is opened
         }
     }
