@@ -38,7 +38,11 @@ public class HandGestureController : MonoBehaviour
     }
     public void changeText(string text)
     {
-        textMeshProText.text = "";
-        textMeshProText.text = text;
+        if (textMeshProText != null)
+        {
+            textMeshProText.text = " ";
+            textMeshProText.text = text;
+        }
+       
     }
 }
