@@ -10,6 +10,11 @@ public class teleportAvatarStart : MonoBehaviour
     public Transform Player2Teleportation;
     public GameObject player;
 
+    public GameObject player1lefthand;
+    public GameObject player1righthand;
+
+    public GameObject player2lefthand;
+    public GameObject player2righthand;
     private bool hasTeleported = false;
 
     void OnTriggerEnter(Collider other)
@@ -28,6 +33,10 @@ public class teleportAvatarStart : MonoBehaviour
                 {
                     player.transform.position = Player1Teleportation.position;
                     hasTeleported = true; // Set the flag to true after teleportation
+                    player1lefthand.SetActive(false);
+                    player1righthand.SetActive(false);
+                    player2lefthand.SetActive(false);
+                    player2righthand.SetActive(false);
                 }
             }
             else if (realtime.clientID == 1)
@@ -37,6 +46,10 @@ public class teleportAvatarStart : MonoBehaviour
                 {
                     player.transform.position = Player2Teleportation.position;
                     hasTeleported = true; // Set the flag to true after teleportation
+                    player1lefthand.SetActive(false);
+                    player1righthand.SetActive(false);
+                    player2lefthand.SetActive(false);
+                    player2righthand.SetActive(false);
                 }
             }
         }
