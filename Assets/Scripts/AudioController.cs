@@ -9,16 +9,11 @@ public class AudioController : MonoBehaviour
     public AudioClip briefcase;
     void Start()
     {
-        // Get the AudioSource component attached to the player
         
-            playerAudioSource = GetComponent<AudioSource>();
         
-            //Debug.Log("playerAudio Source is null in audio controller script");
-        
+        playerAudioSource = GetComponent<AudioSource>();
         
 
-        // For example, play an initial sound when the scene starts
-        //PlaySound(someAudioClip); // Replace someAudioClip with the AudioClip you want to play
     }
 
     // Function to play a sound through the player's AudioSource

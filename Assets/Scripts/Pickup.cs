@@ -24,7 +24,10 @@ public class Pickup : MonoBehaviour
         {
             if (audioController != null)
             {
+
+
                 audioController.PlayHeadphones();
+                
             }
             else
             {
@@ -33,9 +36,14 @@ public class Pickup : MonoBehaviour
             if (gameObject.CompareTag("headphones"))
             {
                 roomSceneManager.headphonesOn();
-            }
+            } 
             gameObject.SetActive(false);
+        } else if (gameObject.CompareTag("doorknob"))
+        {
+            //play door knob sound
+            roomSceneManager.doorKnobOpen();
         }
+        
     }
 
     

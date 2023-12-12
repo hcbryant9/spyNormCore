@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class RoomSceneManager : MonoBehaviour
 {
-    public HandGestureController handGestureController;
+    private HandGestureController handGestureController;
     public GameObject pamphletCanvas;
+    private StartTeleporter startTeleporter;
+
+    private bool canLeave = false;
     void Start()
     {
-        if (handGestureController == null)
-        {
-            handGestureController = GetComponent<HandGestureController>();
-            handGestureController.changeText("put on your headphones");
-        }
+      
+        handGestureController = GetComponent<HandGestureController>();
+        handGestureController.changeText("put on your headphones");
         pamphletCanvas.SetActive(false);
+        startTeleporter = GetComponent<StartTeleporter>();
     }
     public void headphonesOn()
     {
@@ -21,16 +23,25 @@ public class RoomSceneManager : MonoBehaviour
         //play first audio
     }
    
-    
+    public void doorKnobOpen()
+    {
+        if (canLeave)
+        {
+            startTeleporter.LoadScene("Train");
+        }
+        
+    }
     public void displayPamphlets()
     {
         StartCoroutine(DisplayPamphletCoroutine());
+        handGestureController.changeText("open the door");
     }
 
     IEnumerator DisplayPamphletCoroutine()
     {
         pamphletCanvas.SetActive(true);
         yield return new WaitForSeconds(45f); // Display for 45 seconds
+        canLeave = true;
         pamphletCanvas.SetActive(false);
     }
 }
