@@ -13,6 +13,9 @@ public class ChangeAvatarCollision : MonoBehaviour
     public GameObject avatar1;
     public GameObject avatar2;
 
+   
+
+
     //object 1 -> getting the children
     private GameObject oldAvatarHead1;
     private GameObject oldAvatarleftHand1;

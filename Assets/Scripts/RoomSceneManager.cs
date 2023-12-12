@@ -27,7 +27,7 @@ public class RoomSceneManager : MonoBehaviour
     {
         if (canLeave)
         {
-            startTeleporter.LoadScene("Train");
+            startTeleporter.LoadScene("Lobby");
         }
         
     }
