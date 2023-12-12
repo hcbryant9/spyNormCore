@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: t_fx_matcapSP_01
+  m_Shader: {fileID: 4800000, guid: 8917c54e896fc89488f635aa76c5a080, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e76583896a36b964793e63d126912445, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - Deform: 0
+    - Dissolve: 0
+    - _Dis: 0
+    - _EdjeSize: 0.02
+    - _EmP: 1
+    - _Emission: 0.4
+    - _HolOffSet: -0.09
+    - _HolTile: 7
+    - _RimPower: 3
+    - _ShakeBending: -0.02
+    - _ShakeDisplacement: 1.7
+    - _ShakeTime: 4
+    - _Shakespeed: -0.1
+    - fresnel: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorEm: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
