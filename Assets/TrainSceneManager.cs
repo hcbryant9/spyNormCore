@@ -7,16 +7,16 @@ using Normal.Realtime;
 public class TrainSceneManager : MonoBehaviour
 {
     [SerializeField] private Realtime realtime;
-    
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frameff
     void Update()
     {
-        
+
     }
 
     public void startDialouge()
@@ -41,5 +41,13 @@ public class TrainSceneManager : MonoBehaviour
         //Look. At. All. Those. Drugs! It’s not for you, buddy. You are gonna drug Pierre! Up in the lounge, you can poison his drink. With one of those vials. Make him look stupid.”
 
         //“No time to lose, get up there!”
+    }
+    public void syringePickup()
+    {
+
+    }
+    public void vialPickup()
+    {
+
     }
 }
