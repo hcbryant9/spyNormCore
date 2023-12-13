@@ -15,7 +15,7 @@ public class FilingCabinet : MonoBehaviour
         {
             if (realtime.clientID == 0)
             {
-                trainSceneManager.johnDialouge();
+                trainSceneManager.johnDialouge1();
             }
         }
     }
