@@ -37,6 +37,15 @@ public class TrainPickup : MonoBehaviour
                 audioController.PlayHeadphones();
                 trainSceneManager.johnDialouge3();
                 gameObject.SetActive(false);
+            } else if (gameObject.CompareTag("BombMat"))
+            {
+                audioController.PlayHeadphones();
+                gameObject.SetActive(false);
+            } else if (gameObject.CompareTag("Paper"))
+            {
+                audioController.PlayHeadphones();
+                trainSceneManager.pierreDialouge3();
+                gameObject.SetActive(false);
             }
             
         }
