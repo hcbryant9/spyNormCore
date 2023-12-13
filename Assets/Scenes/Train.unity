@@ -15371,8 +15371,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7eac164e8fc45041b32e1d4132eb091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realtime: {fileID: 0}
-  trainSceneManager: {fileID: 0}
+  realtime: {fileID: 1673809111}
+  trainSceneManager: {fileID: 628025198}
+  audioController: {fileID: 1475154298}
+  paper: {fileID: 1158433767}
 --- !u!54 &1462599408
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21321,37 +21323,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 483462, guid: 8665be75ec2e18047abc7c7affebfdea, type: 3}
   m_PrefabInstance: {fileID: 2105349379}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2119109791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2119109792}
-  m_Layer: 0
-  m_Name: cab destination
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2119109792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119109791}
-  m_LocalRotation: {x: -0, y: -0, z: 4.038968e-28, w: 1}
-  m_LocalPosition: {x: -2358, y: -36, z: 23}
-  m_LocalScale: {x: 48.651146, y: 92.90247, z: 66.87154}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1462599404}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143247315
 GameObject:
   m_ObjectHideFlags: 0
@@ -25835,7 +25806,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fdce4e307cdbeb341bc186a499c13034, type: 2}
     - target: {fileID: 3324761684091982439, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.1
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3324761684091982439, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26474,9 +26445,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1505261366261144348, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 38575885}
-    - targetCorrespondingSourceObject: {fileID: 3324761684091982439, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2119109792}
     - targetCorrespondingSourceObject: {fileID: 3324761684091982439, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1158433768}
