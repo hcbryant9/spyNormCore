@@ -1298,6 +1298,7 @@ MonoBehaviour:
   shouldCollect: 1
   audioController: {fileID: 1475154298}
   trainSceneManager: {fileID: 628025198}
+  book: {fileID: 0}
 --- !u!1 &141339555 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7919583845732922504, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
@@ -6210,6 +6211,7 @@ MonoBehaviour:
   shouldCollect: 1
   audioController: {fileID: 1475154298}
   trainSceneManager: {fileID: 628025198}
+  book: {fileID: 0}
 --- !u!54 &575870013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11372,6 +11374,7 @@ MonoBehaviour:
   shouldCollect: 1
   audioController: {fileID: 1475154298}
   trainSceneManager: {fileID: 628025198}
+  book: {fileID: 0}
 --- !u!65 &1016550262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11604,6 +11607,7 @@ MonoBehaviour:
   shouldCollect: 1
   audioController: {fileID: 1475154298}
   trainSceneManager: {fileID: 628025198}
+  book: {fileID: 0}
 --- !u!1001 &1027686076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15236,6 +15240,11 @@ Transform:
   m_Father: {fileID: 1300774740}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1353747431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7261807205980512836, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+  m_PrefabInstance: {fileID: 3619783782736112402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1354930306
 GameObject:
   m_ObjectHideFlags: 0
@@ -20687,6 +20696,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 489014, guid: 1436e91a591902c438895aee15a2ba17, type: 3}
   m_PrefabInstance: {fileID: 1922169899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1927723051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010120824393908261, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+  m_PrefabInstance: {fileID: 3619783782736112402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1927723055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927723051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9833d6b086a959e4489bf997b606a9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldCollect: 0
+  audioController: {fileID: 1475154298}
+  trainSceneManager: {fileID: 628025198}
+  book: {fileID: 1353747431}
+--- !u!54 &1927723056
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927723051}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1927723057
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927723051}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12704231, y: 0.10120809, z: 0.13405609}
+  m_Center: {x: -0.000000067055225, y: 0, z: 0}
 --- !u!1001 &1928227258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22423,6 +22501,7 @@ MonoBehaviour:
   shouldCollect: 1
   audioController: {fileID: 1475154298}
   trainSceneManager: {fileID: 628025198}
+  book: {fileID: 0}
 --- !u!54 &2033173068
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27786,6 +27865,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fdce4e307cdbeb341bc186a499c13034, type: 2}
+    - target: {fileID: 5010120824393908261, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+      propertyPath: m_TagString
+      value: Cabinet
+      objectReference: {fileID: 0}
     - target: {fileID: 5136692716635001122, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -28009,6 +28092,14 @@ PrefabInstance:
     - target: {fileID: 7205349483422702753, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       propertyPath: m_Name
       value: Train
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261807205980512836, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+      propertyPath: m_Name
+      value: replacement book
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261807205980512836, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7273851814629572096, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28315,6 +28406,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7943985229024302200, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2031940050}
+    - targetCorrespondingSourceObject: {fileID: 5010120824393908261, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1927723057}
+    - targetCorrespondingSourceObject: {fileID: 5010120824393908261, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1927723056}
+    - targetCorrespondingSourceObject: {fileID: 5010120824393908261, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1927723055}
     - targetCorrespondingSourceObject: {fileID: 8547367586568912105, guid: 3db70fa5b7e853446814bef661eeacda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1952306897}
