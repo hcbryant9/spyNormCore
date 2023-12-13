@@ -28,14 +28,14 @@ public class TrainPickup : MonoBehaviour
                 if(trainSceneManager.canPickUpSyringe == true)
                 {
                     audioController.PlayHeadphones();
-                    trainSceneManager.syringePickup();
+                    trainSceneManager.johnDialouge5();
                     gameObject.SetActive(false);
                 }
                 
             } else if (gameObject.CompareTag("Vial"))
             {
                 audioController.PlayHeadphones();
-                trainSceneManager.vialPickup();
+                trainSceneManager.johnDialouge3();
                 gameObject.SetActive(false);
             }
             

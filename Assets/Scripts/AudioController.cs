@@ -7,6 +7,7 @@ public class AudioController : MonoBehaviour
     private AudioSource playerAudioSource;
     public AudioClip headphones;
     public AudioClip briefcase;
+    public AudioClip beverage;
     void Start()
     {
         
@@ -55,6 +56,17 @@ public class AudioController : MonoBehaviour
         } else
         {
             Debug.Log("briefcase is null");
+        }
+    }
+    public void PlayBeverage()
+    {
+        if (beverage != null)
+        {
+            PlaySound(beverage);
+        }
+        else
+        {
+            Debug.Log("beverage is null");
         }
     }
 }

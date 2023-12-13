@@ -33,12 +33,18 @@ public class TrainSceneManager : MonoBehaviour
 
         //“No time to lose, get up there!”
     }
-    public void syringePickup()
+   
+    public void johnDialouge3()
     {
-
+        //“Now go sneak the vial into Pierre’s glass.”
+        //Pierre is at the bar
     }
-    public void vialPickup()
+    public void johnDialouge4()
     {
-
+        //“That didn’t work. Shit. John, I was hoping we weren’t gonna have to do this, but back down in the Lucidity case, there are syringes. You’re gonna have to stab him.”
+    }
+    public void johnDialouge5()
+    {
+        //“[sigh], okay.Just make this is seamless as possible.Pretend to bump into him or something. This isn’t ideal, I know, but we have to do something.Higher ups need Bourgeois to look like a junkie. Or just crazy.It’s imperative that he looks stupid.”
     }
 }
