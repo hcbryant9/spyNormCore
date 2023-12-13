@@ -22,27 +22,23 @@ public class TrainPickup : MonoBehaviour
     {
         if (gameObject.activeSelf && shouldCollect)
         {
-            if (audioController != null)
-            {
-
-
-                audioController.PlayHeadphones();
-
-            }
-            else
-            {
-                Debug.Log("audio controller is null");
-            }
+            
             if (gameObject.CompareTag("Syringe"))
             {
-                audioController.PlayHeadphones();
-                trainSceneManager.syringePickup();
+                if(trainSceneManager.canPickUpSyringe == true)
+                {
+                    audioController.PlayHeadphones();
+                    trainSceneManager.syringePickup();
+                    gameObject.SetActive(false);
+                }
+                
             } else if (gameObject.CompareTag("Vial"))
             {
                 audioController.PlayHeadphones();
                 trainSceneManager.vialPickup();
+                gameObject.SetActive(false);
             }
-            gameObject.SetActive(false);
+            
         }
         
     }

@@ -1176,8 +1176,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.020000005, y: 0.03476833, z: 0.019999998}
-  m_Center: {x: -0.000000007916242, y: 0.017383927, z: 0}
+  m_Size: {x: 0.107285224, y: 0.03476833, z: 0.02}
+  m_Center: {x: -0.04364261, y: 0.01738393, z: 0}
 --- !u!114 &135999176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,7 +2915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.9011168
+      value: 4.053
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2945,9 +2945,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1624129740892234680, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
+      propertyPath: m_TagString
+      value: Vial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1192069476227846276, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
+      propertyPath: m_TagString
+      value: Syringe
+      objectReference: {fileID: 0}
+    - target: {fileID: 562705626581680304, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
+      propertyPath: m_TagString
+      value: Vial
+      objectReference: {fileID: 0}
+    - target: {fileID: 661030440929579357, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
+      propertyPath: m_TagString
+      value: Vial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_Name
       value: DrugCase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593612435002992156, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
+      propertyPath: m_TagString
+      value: Syringe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6524,6 +6544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtime: {fileID: 1673809111}
+  canPickUpSyringe: 0
 --- !u!4 &628025199
 Transform:
   m_ObjectHideFlags: 0
@@ -10956,8 +10977,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.03386461, y: 0.1893443, z: 0.033864614}
-  m_Center: {x: 0, y: -2.646978e-23, z: -0.0000000018626454}
+  m_Size: {x: 0.03386461, y: 0.1893443, z: 0.13724764}
+  m_Center: {x: 0, y: -8.0352124e-16, z: 0.051691536}
 --- !u!54 &1017980045
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14519,6 +14540,7 @@ MonoBehaviour:
   openingSpeed: 40
   audioController: {fileID: 1475154298}
   trainSceneManager: {fileID: 628025198}
+  realtime: {fileID: 1673809111}
 --- !u!54 &1384279004
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using Normal.Realtime;
 public class DrugCaseOpening : MonoBehaviour
 {
     private Transform briefcaseLid; // Reference to the briefcase lid transform
@@ -8,7 +8,7 @@ public class DrugCaseOpening : MonoBehaviour
     public AudioController audioController;
 
     public TrainSceneManager trainSceneManager;
-
+    [SerializeField] private Realtime realtime;
     private bool isOpening = false;
     private bool hasBeenOpened = false;
     private Quaternion initialRotation;
@@ -35,7 +35,7 @@ public class DrugCaseOpening : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Hand") && !hasBeenOpened)
+        if (other.gameObject.CompareTag("Hand") && !hasBeenOpened && realtime.clientID == 0 )
         {
             isOpening = true;
             audioController.PlayBriefcase();

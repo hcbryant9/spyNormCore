@@ -8,16 +8,7 @@ public class TrainSceneManager : MonoBehaviour
 {
     [SerializeField] private Realtime realtime;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frameff
-    void Update()
-    {
-
-    }
+    public bool canPickUpSyringe = false;
 
     public void startDialouge()
     {
