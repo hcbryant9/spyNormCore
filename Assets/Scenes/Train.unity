@@ -2947,7 +2947,7 @@ PrefabInstance:
     - target: {fileID: -2870043896668232667, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: defe985fccf58bf47b590ccb044f97e2, type: 3}
+      objectReference: {fileID: 2100000, guid: 4ec4afc30a19c4f9a9760526c922aa26, type: 2}
     - target: {fileID: -1624129740892234680, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_TagString
       value: Vial
@@ -2955,7 +2955,7 @@ PrefabInstance:
     - target: {fileID: -1492983147806756795, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: defe985fccf58bf47b590ccb044f97e2, type: 3}
+      objectReference: {fileID: 2100000, guid: 490bcb80faf2148e7930cd60ca4ec42a, type: 2}
     - target: {fileID: -1192069476227846276, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_TagString
       value: Syringe
@@ -2963,7 +2963,7 @@ PrefabInstance:
     - target: {fileID: 411419126168834086, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: defe985fccf58bf47b590ccb044f97e2, type: 3}
+      objectReference: {fileID: 2100000, guid: 490bcb80faf2148e7930cd60ca4ec42a, type: 2}
     - target: {fileID: 562705626581680304, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_TagString
       value: Vial
@@ -2983,11 +2983,11 @@ PrefabInstance:
     - target: {fileID: 4736057614709700139, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: defe985fccf58bf47b590ccb044f97e2, type: 3}
+      objectReference: {fileID: 2100000, guid: 4ec4afc30a19c4f9a9760526c922aa26, type: 2}
     - target: {fileID: 5559046980773601932, guid: 790be45ef17cc4e489e7421b0233f896, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: defe985fccf58bf47b590ccb044f97e2, type: 3}
+      objectReference: {fileID: 2100000, guid: 4ec4afc30a19c4f9a9760526c922aa26, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15838,8 +15838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658c1ac2f6364df45afa390424920e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headphones: {fileID: 8300000, guid: 4ebc2fe34bac27b4bb980cd71e04e5dd, type: 3}
+  headphones: {fileID: 8300000, guid: b7e7a1c4bcfa26c4b85f689ac28fb7ea, type: 3}
   briefcase: {fileID: 8300000, guid: 4ebc2fe34bac27b4bb980cd71e04e5dd, type: 3}
+  beverage: {fileID: 8300000, guid: 038808181a18a71458c7133356e44e36, type: 3}
 --- !u!4 &1475154299
 Transform:
   m_ObjectHideFlags: 0
@@ -15867,7 +15868,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.64
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15875,7 +15876,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 25.37046
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
