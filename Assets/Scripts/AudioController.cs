@@ -8,12 +8,13 @@ public class AudioController : MonoBehaviour
     public AudioClip headphones;
     public AudioClip briefcase;
     public AudioClip beverage;
+    public AudioClip syringe;
     void Start()
     {
-        
-        
+
+
         playerAudioSource = GetComponent<AudioSource>();
-        
+
 
     }
 
@@ -24,12 +25,14 @@ public class AudioController : MonoBehaviour
         {
             playerAudioSource.clip = clip;
             playerAudioSource.Play();
-        } else
+        }
+        else
         {
             if (clip == null)
             {
                 Debug.Log("the clip is null");
-            } else
+            }
+            else
             {
                 Debug.Log("the source is null");
             }
@@ -40,10 +43,11 @@ public class AudioController : MonoBehaviour
     // For instance:
     public void PlayHeadphones()
     {
-        if(headphones!= null)
+        if (headphones != null)
         {
             PlaySound(headphones);
-        } else
+        }
+        else
         {
             Debug.Log("headphones is null");
         }
@@ -53,7 +57,8 @@ public class AudioController : MonoBehaviour
         if (briefcase != null)
         {
             PlaySound(briefcase);
-        } else
+        }
+        else
         {
             Debug.Log("briefcase is null");
         }
@@ -68,5 +73,19 @@ public class AudioController : MonoBehaviour
         {
             Debug.Log("beverage is null");
         }
+
+    }
+    public void PlaySyringe()
+    {
+        if (beverage != null)
+        {
+            PlaySound(syringe);
+        }
+        else
+        {
+            Debug.Log("beverage is null");
+        }
     }
 }
+
+    

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Normal.Realtime;
 
 public class TrainPickup : MonoBehaviour
 {
@@ -7,7 +8,8 @@ public class TrainPickup : MonoBehaviour
     public AudioController audioController;
     public TrainSceneManager trainSceneManager;
     public GameObject book;
-
+    public GameObject syringeTarget;
+   
     void OnTriggerEnter(Collider other)
     {
         if (gameObject.activeSelf && other.gameObject.CompareTag("Hand"))
@@ -30,6 +32,11 @@ public class TrainPickup : MonoBehaviour
                     audioController.PlayHeadphones();
                     trainSceneManager.johnDialouge5();
                     gameObject.SetActive(false);
+                    //instantiate realtime object on the hand of pierre
+                    Debug.Log("instantiating syringe");
+                    GameObject newSyringe = Realtime.Instantiate("Syringe", syringeTarget.transform.position, syringeTarget.transform.rotation);
+                    newSyringe.transform.parent = syringeTarget.transform;
+
                 }
                 
             } else if (gameObject.CompareTag("Vial"))
