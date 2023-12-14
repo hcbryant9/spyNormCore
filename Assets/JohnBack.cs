@@ -16,7 +16,7 @@ public class JohnBack : MonoBehaviour
         if (other.gameObject.CompareTag("Syringe") && !hasTriggered && !isCooldown)
         {
             Debug.Log("instantiating new syringe in the back of ");
-            audioController.Syringe();
+            audioController.PlaySyringe();
             GameObject newSyringe = Realtime.Instantiate("Syringe", syringeTarget.transform.position, syringeTarget.transform.rotation);
             newSyringe.transform.parent = syringeTarget.transform;
             hasTriggered = true;

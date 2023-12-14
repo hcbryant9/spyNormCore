@@ -9,6 +9,7 @@ public class AudioController : MonoBehaviour
     public AudioClip briefcase;
     public AudioClip beverage;
     public AudioClip syringe;
+    public AudioClip door;
     void Start()
     {
 
@@ -84,6 +85,17 @@ public class AudioController : MonoBehaviour
         else
         {
             Debug.Log("beverage is null");
+        }
+    }
+    public void PlayDoor()
+    {
+        if (beverage != null)
+        {
+            PlaySound(door);
+        }
+        else
+        {
+            Debug.Log("door is null");
         }
     }
 }

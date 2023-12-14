@@ -45,6 +45,7 @@ public class TrainSceneManager : MonoBehaviour
     public void johnDialouge4()
     {
         //“That didn’t work. Shit. John, I was hoping we weren’t gonna have to do this, but back down in the Lucidity case, there are syringes. You’re gonna have to stab him.”
+        canPickUpSyringe = true;
     }
     public void johnDialouge5()
     {
