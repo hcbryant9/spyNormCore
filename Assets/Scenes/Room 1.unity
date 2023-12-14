@@ -6634,7 +6634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &749759375
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6716,7 +6716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749759374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.346, y: 0.7115095, z: 5.3902}
+  m_LocalPosition: {x: -2.346, y: 0.7115095, z: 5.525}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10982,7 +10982,7 @@ PrefabInstance:
     - target: {fileID: -1504981713932161579, guid: 31cb910552d4d87489911d209d97ddab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ae61c8c3763a4df4893a3ec06da40183, type: 2}
+      objectReference: {fileID: 2100000, guid: 1ca8ca2e8ed6c2f49aac6137b4536783, type: 2}
     - target: {fileID: -927199367670048503, guid: 31cb910552d4d87489911d209d97ddab, type: 3}
       propertyPath: m_Name
       value: skySphere
@@ -13079,6 +13079,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 90074b7d36c743e4bac511f00705bf46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243041194690276544, guid: 90074b7d36c743e4bac511f00705bf46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 90074b7d36c743e4bac511f00705bf46, type: 3}
       propertyPath: m_Name
