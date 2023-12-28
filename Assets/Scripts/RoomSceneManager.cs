@@ -40,7 +40,7 @@ public class RoomSceneManager : MonoBehaviour
     IEnumerator DisplayPamphletCoroutine()
     {
         pamphletCanvas.SetActive(true);
-        yield return new WaitForSeconds(45f); // Display for 45 seconds
+        yield return new WaitForSeconds(100f); // Display for 45 seconds
         canLeave = true;
         pamphletCanvas.SetActive(false);
     }

@@ -9,7 +9,7 @@ public class TrainPickup : MonoBehaviour
     public TrainSceneManager trainSceneManager;
     public GameObject book;
     public GameObject syringeTarget;
-   
+    public GameObject bomb;
     void OnTriggerEnter(Collider other)
     {
         if (gameObject.activeSelf && other.gameObject.CompareTag("Hand"))
@@ -19,7 +19,10 @@ public class TrainPickup : MonoBehaviour
 
         }
     }
-
+    private void Start()
+    {
+        bomb.SetActive(false);
+    }
     void Collect()
     {
         if (gameObject.activeSelf && shouldCollect)
@@ -60,6 +63,11 @@ public class TrainPickup : MonoBehaviour
                 trainSceneManager.pierreDialouge1();
 
                 //gameObject.SetActive(false);
+            } else if (gameObject.CompareTag("Bomb"))
+            {
+                bomb.SetActive(true);
+                audioController.PlayHeadphones();
+
             }
             
         }
