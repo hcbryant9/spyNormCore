@@ -35,11 +35,10 @@ public class DrugCaseOpening : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Hand") && !hasBeenOpened && realtime.clientID == 0 )
+        if (other.gameObject.CompareTag("Hand") && !hasBeenOpened)
         {
             isOpening = true;
             audioController.PlayBriefcase();
-            trainSceneManager.johnDialouge2();
             hasBeenOpened = true; // Set the flag to true once the briefcase is opened
         }
     }

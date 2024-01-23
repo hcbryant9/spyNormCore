@@ -13,7 +13,34 @@ public class ChangeAvatarCollision : MonoBehaviour
     public GameObject avatar1;
     public GameObject avatar2;
 
-   
+    /* 
+     adding capabilities for 4 characters - here are the variables needed
+
+
+    public GameObject avatar3;
+    public GameObject avatar4;
+    
+    //object 1 -> getting the children
+    private GameObject oldAvatarHead3;
+    private GameObject oldAvatarleftHand3;
+    private GameObject oldAvatarrightHand3;
+
+    private GameObject oldAvatarHead4;
+    private GameObject oldAvatarleftHand4;
+    private GameObject oldAvatarrightHand4;
+
+    private GameObject newAvatarHead3;
+    private GameObject newAvatarleftHand3;
+    private GameObject newAvatarrightHand3;
+    private GameObject newAvatarbody3;
+
+    private GameObject newAvatarHead4;
+    private GameObject newAvatarleftHand4;
+    private GameObject newAvatarrightHand4;
+    private GameObject newAvatarbody4;
+     */
+
+
 
 
     //object 1 -> getting the children
@@ -52,7 +79,7 @@ public class ChangeAvatarCollision : MonoBehaviour
     private void ConfigurationofAvatar()
     {
        
-            //logic for player 0
+            //logic for player 1
             
             newAvatarHead1 = avatar1.transform.GetChild(0).gameObject;
             newAvatarleftHand1 = avatar1.transform.GetChild(1).gameObject;
@@ -71,7 +98,7 @@ public class ChangeAvatarCollision : MonoBehaviour
 
 
 
-            //logic for player 1 
+            //logic for player 2 
 
             newAvatarHead2 = avatar2.transform.GetChild(0).gameObject;
             newAvatarleftHand2 = avatar2.transform.GetChild(1).gameObject;
@@ -88,8 +115,47 @@ public class ChangeAvatarCollision : MonoBehaviour
             newAvatarrightHand2.transform.parent = oldAvatarrightHand2.transform;
             newAvatarbody2.transform.parent = players[1].transform;
 
+            /*
 
-        
+            logic for player 3
+
+
+            newAvatarHead3 = avatar3.transform.GetChild(0).gameObject;
+            newAvatarleftHand3 = avatar3.transform.GetChild(1).gameObject;
+            newAvatarrightHand3 = avatar3.transform.GetChild(2).gameObject;
+            newAvatarbody3 = avatar3.transform.GetChild(3).gameObject;
+
+            oldAvatarHead3 = players[2].transform.GetChild(0).gameObject;
+            oldAvatarleftHand3 = players[2].transform.GetChild(1).gameObject;
+            oldAvatarrightHand3 = players[2].transform.GetChild(2).gameObject;
+
+
+            newAvatarHead3.transform.parent = oldAvatarHead3.transform;
+            newAvatarleftHand3.transform.parent = oldAvatarleftHand3.transform;
+            newAvatarrightHand3.transform.parent = oldAvatarrightHand3.transform;
+            newAvatarbody3.transform.parent = players[2].transform;
+
+
+
+            logic for player 4
+
+            newAvatarHead4 = avatar4.transform.GetChild(0).gameObject;
+            newAvatarleftHand4 = avatar4.transform.GetChild(1).gameObject;
+            newAvatarrightHand4 = avatar4.transform.GetChild(2).gameObject;
+            newAvatarbody4 = avatar4.transform.GetChild(3).gameObject;
+
+            oldAvatarHead4 = players[3].transform.GetChild(0).gameObject;
+            oldAvatarleftHand4 = players[3].transform.GetChild(1).gameObject;
+            oldAvatarrightHand4 = players[3].transform.GetChild(2).gameObject;
+
+
+            newAvatarHead4.transform.parent = oldAvatarHead4.transform;
+            newAvatarleftHand4.transform.parent = oldAvatarleftHand4.transform;
+            newAvatarrightHand4.transform.parent = oldAvatarrightHand4.transform;
+            newAvatarbody4.transform.parent = players[3].transform;
+
+         */
+
     }
 
     void OnTriggerEnter(Collider other)
