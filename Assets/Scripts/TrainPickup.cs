@@ -21,7 +21,7 @@ public class TrainPickup : MonoBehaviour
     }
     private void Start()
     {
-        bomb.SetActive(false);
+        //bomb.SetActive(false);
     }
     void Collect()
     {

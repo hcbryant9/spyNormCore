@@ -21360,12 +21360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b6ae53fe1e66d429cc41bbf5b29cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localAvatarPrefab: {fileID: 5459990635343779743, guid: 1181a6268a477dc448d7ec47215ae20f, type: 3}
-  _localPlayer:
-    root: {fileID: 1011260225}
-    head: {fileID: 2082895929}
-    leftHand: {fileID: 308186198}
-    rightHand: {fileID: 300394719}
 --- !u!4 &1673809113
 Transform:
   m_ObjectHideFlags: 0
@@ -26901,11 +26895,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3001529, y: 0.00992992, z: 0.7471658}
   m_Center: {x: 0.000000059604645, y: 0.0000000011641532, z: 9.313226e-10}
---- !u!4 &2082895929 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
-  m_PrefabInstance: {fileID: 1214543838}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2084132980
 GameObject:
   m_ObjectHideFlags: 0
@@ -29456,9 +29445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08dff4fb3b027234c8a2562e96aa0846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _head: {fileID: 8374588168502603739}
-  _leftHand: {fileID: 1707972934755040538}
-  _rightHand: {fileID: 2731119650376015362}
 --- !u!1 &1582579184414412938
 GameObject:
   m_ObjectHideFlags: 0
@@ -35711,9 +35697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08dff4fb3b027234c8a2562e96aa0846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _head: {fileID: 6652644141882540421}
-  _leftHand: {fileID: 4600852932613198660}
-  _rightHand: {fileID: 976315550394691676}
 --- !u!4 &4468505948334258626
 Transform:
   m_ObjectHideFlags: 0
@@ -36109,7 +36092,7 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 8666314323493696534}
   - componentID: 2
-    component: {fileID: 5538558975426791719}
+    component: {fileID: 0}
   _childViews: []
 --- !u!1 &5101939627496313673
 GameObject:
@@ -37643,7 +37626,7 @@ MonoBehaviour:
   _sceneViewDestroyWhenLastClientLeaves: 1
   _components:
   - componentID: 1
-    component: {fileID: 4448490060851884426}
+    component: {fileID: 0}
   - componentID: 2
     component: {fileID: 2279337197193075187}
   _childViews:
@@ -39768,7 +39751,7 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5777729086706145864}
   - componentID: 2
-    component: {fileID: 7257156088790443897}
+    component: {fileID: 0}
   _childViews: []
 --- !u!4 &7988338333232533090
 Transform:
@@ -41634,7 +41617,7 @@ MonoBehaviour:
   _sceneViewDestroyWhenLastClientLeaves: 1
   _components:
   - componentID: 1
-    component: {fileID: 1573521175929806804}
+    component: {fileID: 0}
   - componentID: 2
     component: {fileID: 4020489691486779309}
   _childViews:
