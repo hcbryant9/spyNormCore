@@ -3,10 +3,8 @@ using Normal.Realtime;
 
 public class openDoor : MonoBehaviour
 {
-    public AudioController audioController;
-    public TrainSceneManager trainSceneManager;
-    public GameObject door;
-    [SerializeField] private Realtime realtime;
+    public AudioController audioController; // reference to audio manager
+    public AudioClip door; // sound you want this door to make
 
     private bool hasTriggered = false;
     private bool isDoorOpen = false;
@@ -16,7 +14,7 @@ public class openDoor : MonoBehaviour
 
     private void Start()
     {
-        initialRotation = door.transform.rotation;
+        initialRotation = gameObject.transform.rotation;
         targetRotation = initialRotation * Quaternion.Euler(0, -90, 0); // Rotate -90 degrees from initial rotation
         
     }
@@ -26,10 +24,10 @@ public class openDoor : MonoBehaviour
         if (isDoorOpen)
         {
             // Gradually rotate the door towards the target rotation
-            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation, targetRotation, openSpeed * Time.deltaTime);
+            gameObject.transform.rotation = Quaternion.RotateTowards(gameObject.transform.rotation, targetRotation, openSpeed * Time.deltaTime);
 
             // Check if the door has reached the target rotation
-            if (Quaternion.Angle(door.transform.rotation, targetRotation) < 0.1f)
+            if (Quaternion.Angle(gameObject.transform.rotation, targetRotation) < 0.1f)
             {
                 isDoorOpen = false;
             }
@@ -40,7 +38,7 @@ public class openDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hand") && !hasTriggered)
         {
-            audioController.PlayDoor();
+            audioController.PlaySound(door);
             hasTriggered = true; // Set the flag to true to indicate the event has occurred
             OpenDoor();
         }

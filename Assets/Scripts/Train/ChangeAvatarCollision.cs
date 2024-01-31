@@ -157,7 +157,26 @@ public class ChangeAvatarCollision : MonoBehaviour
          */
 
     }
+    private void ConfigurationofAvatarOne()
+    {
+        //logic for player 1
 
+        newAvatarHead1 = avatar1.transform.GetChild(0).gameObject;
+        newAvatarleftHand1 = avatar1.transform.GetChild(1).gameObject;
+        newAvatarrightHand1 = avatar1.transform.GetChild(2).gameObject;
+        newAvatarbody1 = avatar1.transform.GetChild(3).gameObject;
+
+        oldAvatarHead1 = players[0].transform.GetChild(0).gameObject;
+        oldAvatarleftHand1 = players[0].transform.GetChild(1).gameObject;
+        oldAvatarrightHand1 = players[0].transform.GetChild(2).gameObject;
+
+
+        newAvatarHead1.transform.parent = oldAvatarHead1.transform;
+        newAvatarleftHand1.transform.parent = oldAvatarleftHand1.transform;
+        newAvatarrightHand1.transform.parent = oldAvatarrightHand1.transform;
+        newAvatarbody1.transform.parent = players[0].transform;
+
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hand") && canTrigger)
@@ -171,6 +190,17 @@ public class ChangeAvatarCollision : MonoBehaviour
                 {
                     Debug.Log("configuring!");
                     ConfigurationofAvatar();
+
+                    // Update last trigger time and set canTrigger to false
+                    lastTriggerTime = Time.time;
+                    canTrigger = false;
+
+                    // Start the cooldown timer
+                    StartCoroutine(ActivateCooldown());
+                } else if (players[0] != null)
+                {
+                    Debug.Log("configuring player ONE ONLY!");
+                    ConfigurationofAvatarOne();
 
                     // Update last trigger time and set canTrigger to false
                     lastTriggerTime = Time.time;
