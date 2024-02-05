@@ -12,7 +12,11 @@ public class CameraCollection : MonoBehaviour
         if (other.CompareTag("Hand") && !triggered)
         {
             triggered = true;
-            audioController.PlayHeadphones();
+            if (audioController != false)
+            {
+                audioController.PlayHeadphones();
+            }
+            
             Destroy(gameObject);
         }
     }

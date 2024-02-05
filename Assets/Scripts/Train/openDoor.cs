@@ -38,7 +38,11 @@ public class openDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hand") && !hasTriggered)
         {
-            audioController.PlaySound(door);
+            if(audioController != null || door != null)
+            {
+                audioController.PlaySound(door);
+            }
+            
             hasTriggered = true; // Set the flag to true to indicate the event has occurred
             OpenDoor();
         }
