@@ -4,7 +4,7 @@ using Normal.Realtime;
 public class openDoor : MonoBehaviour
 {
     public AudioController audioController; // reference to audio manager
-    public AudioClip door; // sound you want this door to make
+    
 
     private bool hasTriggered = false;
     private bool isDoorOpen = false;
@@ -38,9 +38,9 @@ public class openDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hand") && !hasTriggered)
         {
-            if(audioController != null || door != null)
+            if(audioController != null)
             {
-                audioController.PlaySound(door);
+                audioController.PlayDoor();
             }
             
             hasTriggered = true; // Set the flag to true to indicate the event has occurred
