@@ -4852,6 +4852,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5991998598272622619, guid: 1665e176a79b88342ac75a4b0db4c3dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1180288858}
+    - targetCorrespondingSourceObject: {fileID: 5991998598272622619, guid: 1665e176a79b88342ac75a4b0db4c3dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180288859}
     - targetCorrespondingSourceObject: {fileID: 6049730037992578565, guid: 1665e176a79b88342ac75a4b0db4c3dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 875447027}
@@ -5020,6 +5023,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05749023, y: 0.32557216, z: 0.16111785}
   m_Center: {x: 0.0020796244, y: -0.00000009685755, z: -0.065050766}
+--- !u!114 &1180288859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180288845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d6c588dd1d79489e637e592904dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1475154298}
 --- !u!1 &1182585333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1385679470915981145, guid: 8539d6bc7ecfca141b36371711619822, type: 3}
