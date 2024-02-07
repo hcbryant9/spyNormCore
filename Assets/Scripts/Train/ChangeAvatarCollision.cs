@@ -12,33 +12,16 @@ public class ChangeAvatarCollision : MonoBehaviour
     //object to change to
     public GameObject avatar1;
     public GameObject avatar2;
-
-    /* 
-     adding capabilities for 4 characters - here are the variables needed
-
-
     public GameObject avatar3;
     public GameObject avatar4;
     
-    //object 1 -> getting the children
-    private GameObject oldAvatarHead3;
-    private GameObject oldAvatarleftHand3;
-    private GameObject oldAvatarrightHand3;
+    //object 3 -> getting the children
+    
 
-    private GameObject oldAvatarHead4;
-    private GameObject oldAvatarleftHand4;
-    private GameObject oldAvatarrightHand4;
+    
 
-    private GameObject newAvatarHead3;
-    private GameObject newAvatarleftHand3;
-    private GameObject newAvatarrightHand3;
-    private GameObject newAvatarbody3;
-
-    private GameObject newAvatarHead4;
-    private GameObject newAvatarleftHand4;
-    private GameObject newAvatarrightHand4;
-    private GameObject newAvatarbody4;
-     */
+    
+     
 
 
 
@@ -52,6 +35,13 @@ public class ChangeAvatarCollision : MonoBehaviour
     private GameObject oldAvatarleftHand2;
     private GameObject oldAvatarrightHand2;
 
+    private GameObject oldAvatarHead3;
+    private GameObject oldAvatarleftHand3;
+    private GameObject oldAvatarrightHand3;
+
+    private GameObject oldAvatarHead4;
+    private GameObject oldAvatarleftHand4;
+    private GameObject oldAvatarrightHand4;
 
     //object 2 -> getting the children
     private GameObject newAvatarHead1;
@@ -64,7 +54,17 @@ public class ChangeAvatarCollision : MonoBehaviour
     private GameObject newAvatarrightHand2;
     private GameObject newAvatarbody2;
 
+    private GameObject newAvatarHead3;
+    private GameObject newAvatarleftHand3;
+    private GameObject newAvatarrightHand3;
+    private GameObject newAvatarbody3;
 
+    private GameObject newAvatarHead4;
+    private GameObject newAvatarleftHand4;
+    private GameObject newAvatarrightHand4;
+    private GameObject newAvatarbody4;
+
+    //array to hold all players with tag "player"
     private GameObject[] players;
 
 
@@ -115,9 +115,9 @@ public class ChangeAvatarCollision : MonoBehaviour
             newAvatarrightHand2.transform.parent = oldAvatarrightHand2.transform;
             newAvatarbody2.transform.parent = players[1].transform;
 
-            /*
+            
 
-            logic for player 3
+            //logic for player 3
 
 
             newAvatarHead3 = avatar3.transform.GetChild(0).gameObject;
@@ -137,7 +137,7 @@ public class ChangeAvatarCollision : MonoBehaviour
 
 
 
-            logic for player 4
+            //logic for player 4
 
             newAvatarHead4 = avatar4.transform.GetChild(0).gameObject;
             newAvatarleftHand4 = avatar4.transform.GetChild(1).gameObject;
@@ -154,7 +154,7 @@ public class ChangeAvatarCollision : MonoBehaviour
             newAvatarrightHand4.transform.parent = oldAvatarrightHand4.transform;
             newAvatarbody4.transform.parent = players[3].transform;
 
-         */
+         
 
     }
     private void ConfigurationofAvatarOne()
@@ -184,9 +184,11 @@ public class ChangeAvatarCollision : MonoBehaviour
             if (Time.time - lastTriggerTime > cooldownDuration)
             {
                 players = GameObject.FindGameObjectsWithTag("Player");
+                Debug.Log("player at id 3" + players[3]);
+                Debug.Log("player at id 2" + players[2]);
                 Debug.Log("player at id 1" + players[1]);
                 Debug.Log("player at id 0" + players[0]);
-                if (players[0] != null && players[1] != null)
+                if (players[0] != null && players[1] != null && players[2] != null && players[3] != null)
                 {
                     Debug.Log("configuring!");
                     ConfigurationofAvatar();
