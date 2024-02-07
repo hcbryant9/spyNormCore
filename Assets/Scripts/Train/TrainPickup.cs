@@ -7,9 +7,9 @@ public class TrainPickup : MonoBehaviour
     public bool shouldCollect = true; // Boolean to define if the object should be collected
     public AudioController audioController;
     public TrainSceneManager trainSceneManager;
-    public GameObject book;
+    //public GameObject book;
     public GameObject syringeTarget;
-    public GameObject bomb;
+    //public GameObject bomb;
     void OnTriggerEnter(Collider other)
     {
         if (gameObject.activeSelf && other.gameObject.CompareTag("Hand"))
@@ -56,18 +56,6 @@ public class TrainPickup : MonoBehaviour
                 audioController.PlayHeadphones();
                 trainSceneManager.pierreDialouge3();
                 gameObject.SetActive(false);
-            } else if (gameObject.CompareTag("Cabinet"))
-            {
-                book.SetActive(true);
-                audioController.PlayHeadphones();
-                trainSceneManager.pierreDialouge1();
-
-                //gameObject.SetActive(false);
-            } else if (gameObject.CompareTag("Bomb"))
-            {
-                bomb.SetActive(true);
-                audioController.PlayHeadphones();
-
             }
             
         }
