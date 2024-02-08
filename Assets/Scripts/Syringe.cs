@@ -6,6 +6,14 @@ public class Syringe : MonoBehaviour
 {
     private Transform syringeTarget;
     private bool canTrigger = true;
+    private Rigidbody rb;
+    private Collider coll;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
+        coll = GetComponent<Collider>(); // Get the Collider component
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +37,9 @@ public class Syringe : MonoBehaviour
             {
                 // Hide the item
                 gameObject.SetActive(false);
+                // Disable the Rigidbody and Collider components
+                rb.isKinematic = true;
+                coll.enabled = false;
             }
         }
     }
