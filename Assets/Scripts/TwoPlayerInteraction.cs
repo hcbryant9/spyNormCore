@@ -9,6 +9,9 @@ public class TwoPlayerInteraction : MonoBehaviour
     private bool canTrigger = true;
     private float lastTriggerTime = 0f;
     private float cooldownDuration = 5f; // 5 seconds cooldown
+    public Animator doorAnimation;
+
+    private bool canPlayAnimation = true;
 
     // HashSet to store references to unique Hand objects inside the trigger zone
     private HashSet<GameObject> handsInside = new HashSet<GameObject>();
@@ -16,7 +19,7 @@ public class TwoPlayerInteraction : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the collider is tagged as "Hand" and if it's not already in the HashSet
-        if (other.gameObject.CompareTag("Hand") && !handsInside.Contains(other.gameObject))
+        if (other.gameObject.CompareTag("Hand") && !handsInside.Contains(other.gameObject) && canPlayAnimation)
         {
             // Add the Hand object to the HashSet
             handsInside.Add(other.gameObject);
@@ -24,7 +27,9 @@ public class TwoPlayerInteraction : MonoBehaviour
             // Check if enough unique Hand objects are inside and the trigger can be activated
             if (handsInside.Count >= 6 && canTrigger)
             {
-                Debug.Log("2 HANDS INSIDE");
+                doorAnimation.Play("illusion_door_open");
+                canPlayAnimation = false;
+                
                 if (Time.time - lastTriggerTime > cooldownDuration)
                 {
                     // Update last trigger time and set canTrigger to false
