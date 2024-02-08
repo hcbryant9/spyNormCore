@@ -16,8 +16,8 @@ public class CameraCollection : MonoBehaviour
             {
                 audioController.PlayHeadphones();
             }
-            
-            Destroy(gameObject);
+
+            gameObject.SetActive(false);
         }
     }
 }
