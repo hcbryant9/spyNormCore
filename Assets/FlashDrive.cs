@@ -23,6 +23,8 @@ public class FlashDrive : MonoBehaviour
         {
             canTrigger = false;
             driveTarget = other.transform;
+            rb.isKinematic = true;
+            coll.enabled = false;
         }
     }
 
@@ -42,8 +44,7 @@ public class FlashDrive : MonoBehaviour
                 gameObject.SetActive(false);
                 drive.SetActive(true);
                 // Disable the Rigidbody and Collider components
-                rb.isKinematic = true;
-                coll.enabled = false;
+                
             }
         }
     }

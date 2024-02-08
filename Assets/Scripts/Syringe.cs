@@ -21,6 +21,8 @@ public class Syringe : MonoBehaviour
         {
             canTrigger = false;
             syringeTarget = other.transform;
+            rb.isKinematic = true;
+            coll.enabled = false;
         }
     }
 
@@ -38,8 +40,7 @@ public class Syringe : MonoBehaviour
                 // Hide the item
                 gameObject.SetActive(false);
                 // Disable the Rigidbody and Collider components
-                rb.isKinematic = true;
-                coll.enabled = false;
+                
             }
         }
     }
