@@ -133,9 +133,11 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.1
+  bundleVersion: OVRTransitionAPKVersion
   preloadedAssets:
   - {fileID: 11400000, guid: 58a230ec32fc9bf4a92c19cb1bef8e40, type: 2}
+  - {fileID: -8659102366345831702, guid: 7312f89137995f24885772400ce430cf, type: 2}
+  - {fileID: 11400000, guid: 5b7d36e6a8b2d76469ae9594d6f81302, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -161,13 +163,13 @@ PlayerSettings:
     Standalone: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 0
-  AndroidBundleVersionCode: 1
+  overrideDefaultApplicationIdentifier: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 29
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: 
-  stripEngineCode: 1
+  stripEngineCode: 0
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
@@ -248,7 +250,7 @@ PlayerSettings:
   useCustomGradlePropertiesTemplate: 0
   useCustomGradleSettingsTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 2
+  AndroidTargetArchitectures: 1
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -848,10 +850,11 @@ PlayerSettings:
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
-    Android: 1
+    Android: 0
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   managedStrippingLevel:
+    Android: 0
     EmbeddedLinux: 1
     GameCoreScarlett: 1
     GameCoreXboxOne: 1

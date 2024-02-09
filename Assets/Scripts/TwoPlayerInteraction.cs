@@ -27,7 +27,12 @@ public class TwoPlayerInteraction : MonoBehaviour
             // Check if enough unique Hand objects are inside and the trigger can be activated
             if (handsInside.Count >= 6 && canTrigger)
             {
-                door.SetActive(false);
+                if (door != null)
+                {
+                    door.SetActive(false); // deactivate the door
+                }
+                
+                
                 canPlayAnimation = false;
                 
                 if (Time.time - lastTriggerTime > cooldownDuration)
