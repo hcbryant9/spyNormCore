@@ -19,10 +19,11 @@ public class Syringe : MonoBehaviour
     {
         if (canTrigger && other.CompareTag("Hand"))
         {
-            canTrigger = false;
-            syringeTarget = other.transform;
             rb.isKinematic = true;
             coll.enabled = false;
+            canTrigger = false;
+            syringeTarget = other.transform;
+            
         }
     }
 

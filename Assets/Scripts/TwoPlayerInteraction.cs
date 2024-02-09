@@ -9,7 +9,7 @@ public class TwoPlayerInteraction : MonoBehaviour
     private bool canTrigger = true;
     private float lastTriggerTime = 0f;
     private float cooldownDuration = 5f; // 5 seconds cooldown
-    public Animator doorAnimation;
+    public GameObject door;
 
     private bool canPlayAnimation = true;
 
@@ -27,7 +27,7 @@ public class TwoPlayerInteraction : MonoBehaviour
             // Check if enough unique Hand objects are inside and the trigger can be activated
             if (handsInside.Count >= 6 && canTrigger)
             {
-                doorAnimation.Play("illusion_door_open");
+                door.SetActive(false);
                 canPlayAnimation = false;
                 
                 if (Time.time - lastTriggerTime > cooldownDuration)
