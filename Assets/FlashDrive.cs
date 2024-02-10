@@ -12,12 +12,13 @@ public class FlashDrive : MonoBehaviour
 
     public GameObject redLight; //light to rotate
 
+    private bool buttonOnePressed = false;
     private void Start()
     {
         drive.SetActive(false);
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
         coll = GetComponent<Collider>(); // Get the Collider component
-        rotateLight();
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,8 +42,12 @@ public class FlashDrive : MonoBehaviour
 
             // Follow the syringeTarget transform rotation
             transform.rotation = driveTarget.rotation;
-            if (OVRInput.Get(OVRInput.Button.One)) // tap the a button to make the drive disappear
+
+            // Check if Button One is pressed
+            if (OVRInput.GetDown(OVRInput.Button.One) && !buttonOnePressed)
             {
+                buttonOnePressed = true;
+
                 // Hide the item
                 gameObject.SetActive(false);
                 drive.SetActive(true);
