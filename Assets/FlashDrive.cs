@@ -17,7 +17,7 @@ public class FlashDrive : MonoBehaviour
         drive.SetActive(false);
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
         coll = GetComponent<Collider>(); // Get the Collider component
-        
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -59,7 +59,7 @@ public class FlashDrive : MonoBehaviour
         {
             // Define the target rotation (rotate by -60 degrees in the y-axis)
             Quaternion targetRotation = Quaternion.Euler(redLight.transform.eulerAngles.x,
-                                                         redLight.transform.eulerAngles.y - 65,
+                                                         redLight.transform.eulerAngles.y - 60,
                                                          redLight.transform.eulerAngles.z);
 
             // Define the duration of rotation
