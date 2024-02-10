@@ -17,7 +17,7 @@ public class FlashDrive : MonoBehaviour
         drive.SetActive(false);
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
         coll = GetComponent<Collider>(); // Get the Collider component
-       
+        rotateLight();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,6 +49,7 @@ public class FlashDrive : MonoBehaviour
 
                 // Rotate Light
                 rotateLight();
+                canTrigger = true;
             }
         }
     }
