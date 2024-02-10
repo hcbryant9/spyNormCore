@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class finalChamber : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject final;
     void Start()
     {
-        gameObject.SetActive(false);
+        final.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private bool triggered = false;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Hand") && !triggered)
+        {
+            final.SetActive(true);
+            triggered = true;
+            
+        }
     }
+
 }
