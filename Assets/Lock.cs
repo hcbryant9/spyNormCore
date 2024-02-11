@@ -15,6 +15,7 @@ public class Lock : MonoBehaviour
     public GameObject lockedlock;
     public GameObject unlockedlock;
 
+    public Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
@@ -57,8 +58,10 @@ public class Lock : MonoBehaviour
                     unlockedlock.SetActive(true);
                     lockedlock.SetActive(false);
                     gameObject.SetActive(false);
-                    
-                    
+
+                    //animate drawer opening
+                    animator.Play("unlockCabinet");
+
                 }
                 // Disable the Rigidbody and Collider components
                 //animator.Play("");

@@ -9,7 +9,9 @@ public class TwoPlayerInteraction : MonoBehaviour
     private bool canTrigger = true;
     private float lastTriggerTime = 0f;
     private float cooldownDuration = 5f; // 5 seconds cooldown
-    public GameObject door;
+
+    public GameObject door; //reference to the door
+    public Material newMaterial; // transparent material to get switched to
 
     private bool canPlayAnimation = true;
 
@@ -27,12 +29,28 @@ public class TwoPlayerInteraction : MonoBehaviour
             // Check if enough unique Hand objects are inside and the trigger can be activated
             if (handsInside.Count >= 6 && canTrigger)
             {
-                if (door != null)
+                if (door != null && newMaterial != null)
                 {
-                    door.SetActive(false); // deactivate the door
+                    // Get the renderer component of the object
+                    Renderer renderer = door.GetComponent<Renderer>();
+
+                    // Check if the renderer component exists
+                    if (renderer != null)
+                    {
+                        // Assign the new material to the object
+                        renderer.material = newMaterial;
+                    }
+                    else
+                    {
+                        Debug.LogError("Renderer component not found on the object.");
+                    }
                 }
-                
-                
+                else
+                {
+                    Debug.LogError("Object or new material not assigned.");
+                }
+
+
                 canPlayAnimation = false;
                 
                 if (Time.time - lastTriggerTime > cooldownDuration)
