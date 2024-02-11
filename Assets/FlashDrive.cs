@@ -53,12 +53,12 @@ public class FlashDrive : MonoBehaviour
                 drive.SetActive(true);
 
                 // Rotate Light
-                RotateLight();
-                //canTrigger = true;
+                rotateLight();
+                canTrigger = true;
             }
         }
     }
-    void RotateLight()
+    void rotateLight()
     {
         // Check if the reference to the red light is valid
         if (redLight != null)
