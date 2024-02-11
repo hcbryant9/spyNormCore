@@ -12,12 +12,14 @@ public class Lock : MonoBehaviour
     //public Animator animator;
 
     public GameObject unlockedKey;
+    public GameObject lockedlock;
+    public GameObject unlockedlock;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
         coll = GetComponent<Collider>(); // Get the Collider component
-
+        unlockedlock.SetActive(false);
         if (unlockedKey != null)
         {
             unlockedKey.SetActive(false);
@@ -52,6 +54,11 @@ public class Lock : MonoBehaviour
                 if (unlockedKey != null)
                 {
                     unlockedKey.SetActive(true);
+                    unlockedlock.SetActive(true);
+                    lockedlock.SetActive(false);
+                    gameObject.SetActive(false);
+                    
+                    
                 }
                 // Disable the Rigidbody and Collider components
                 //animator.Play("");
