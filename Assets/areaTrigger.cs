@@ -17,7 +17,7 @@ public class AreaTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Hand"))
         {
             inArea = true;
             uiCanvas.gameObject.SetActive(true);
@@ -26,7 +26,7 @@ public class AreaTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Hand"))
         {
             uiCanvas.gameObject.SetActive(false);
         }
