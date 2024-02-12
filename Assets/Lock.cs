@@ -16,7 +16,7 @@ public class Lock : MonoBehaviour
     public GameObject unlockedlock;
 
     public Animator cabinetAnimator;
-   
+    public Animator roomAnimator;
     
     void Start()
     {
@@ -63,7 +63,7 @@ public class Lock : MonoBehaviour
 
                     //animate drawer opening
                     cabinetAnimator.Play("unlockCabinet");
-
+                    roomAnimator.Play("risingRoom");
                     //play the illusion room animator rising
 
                     
