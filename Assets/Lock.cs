@@ -63,7 +63,7 @@ public class Lock : MonoBehaviour
 
                     //animate drawer opening
                     cabinetAnimator.Play("unlockCabinet");
-                    roomAnimator.Play("risingRoom");
+                    roomAnimator.Play("roomRising");
                     //play the illusion room animator rising
 
                     
