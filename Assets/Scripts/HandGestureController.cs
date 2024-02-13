@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 public class HandGestureController : MonoBehaviour
 {
+    
     public GameObject checklistCanvas;
     public TextMeshProUGUI textMeshProText;
     // Threshold for determining if the hand is facing up (close to 180 in Z rotation)

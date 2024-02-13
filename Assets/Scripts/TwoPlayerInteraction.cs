@@ -31,8 +31,14 @@ public class TwoPlayerInteraction : MonoBehaviour
             {
                 if (animator != null)
                 {
-                    animator.Play("slide_door");
-
+                    
+                    if (gameObject.CompareTag("Paper"))
+                    {
+                        animator.Play("execOfficeDoor");
+                    } else
+                    {
+                        animator.Play("slide_door");
+                    }
                 }
                 
 
