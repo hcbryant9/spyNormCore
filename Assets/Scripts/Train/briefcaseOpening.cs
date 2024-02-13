@@ -5,7 +5,7 @@ public class briefcaseOpening : MonoBehaviour
     private Transform briefcaseLid; // Reference to the briefcase lid transform
     public float openingAngle = 90f; // Angle to open the briefcase
     public float openingSpeed = 2f; // Speed of the opening animation
-
+    public Canvas uiCanvas;
 
     /*
      * previosly we had a canvas appear to show information. will we do this same thing with a new canvas?
@@ -23,6 +23,7 @@ public class briefcaseOpening : MonoBehaviour
         briefcaseLid = this.gameObject.transform;
         initialRotation = briefcaseLid.rotation;
         targetRotation = initialRotation * Quaternion.Euler(0f, 0f, openingAngle);
+        uiCanvas.gameObject.SetActive(false);
     }
 
     void Update()
@@ -44,6 +45,7 @@ public class briefcaseOpening : MonoBehaviour
             isOpening = true;
             audioController.PlayBriefcase();
             hasBeenOpened = true; // Set the flag to true once the briefcase is opened
+            uiCanvas.gameObject.SetActive(true);
         }
     }
 }
