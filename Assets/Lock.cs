@@ -17,6 +17,8 @@ public class Lock : MonoBehaviour
 
     public Animator cabinetAnimator;
     public Animator roomAnimator;
+
+    public GameObject briefcase;
     
     void Start()
     {
@@ -27,7 +29,10 @@ public class Lock : MonoBehaviour
         {
             unlockedKey.SetActive(false);
         }
-        
+        if (briefcase != null)
+        {
+            briefcase.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -65,7 +70,7 @@ public class Lock : MonoBehaviour
                     cabinetAnimator.Play("unlockCabinet");
                     roomAnimator.Play("roomRising");
                     //play the illusion room animator rising
-
+                    briefcase.SetActive(true);
                     
 
                 }

@@ -5,13 +5,13 @@ using Normal.Realtime;
 
 public class TwoPlayerInteraction : MonoBehaviour
 {
-    [SerializeField] private Realtime realtime;
+    
     private bool canTrigger = true;
     private float lastTriggerTime = 0f;
     private float cooldownDuration = 5f; // 5 seconds cooldown
 
     public GameObject door; //reference to the door
-    public Animator animator; //reference to the door opening
+    
 
     private bool canPlayAnimation = true;
 
@@ -29,18 +29,8 @@ public class TwoPlayerInteraction : MonoBehaviour
             // Check if enough unique Hand objects are inside and the trigger can be activated
             if (handsInside.Count >= 6 && canTrigger)
             {
-                if (animator != null)
-                {
-                    
-                    if (gameObject.CompareTag("Paper"))
-                    {
-                        animator.Play("execOfficeDoor");
-                    } else
-                    {
-                        animator.Play("slide_door");
-                    }
-                }
-                
+
+                door.SetActive(false);
 
 
                 canPlayAnimation = false;

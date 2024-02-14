@@ -45,7 +45,11 @@ public class briefcaseOpening : MonoBehaviour
             isOpening = true;
             audioController.PlayBriefcase();
             hasBeenOpened = true; // Set the flag to true once the briefcase is opened
-            uiCanvas.gameObject.SetActive(true);
+            if (uiCanvas != null)
+            {
+                uiCanvas.gameObject.SetActive(true);
+            }
+            
         }
     }
 }

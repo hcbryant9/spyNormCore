@@ -40,7 +40,7 @@ public class openDoor : MonoBehaviour
         {
             if(audioController != null)
             {
-                audioController.PlayDoor();
+                //audioController.PlayDoor();
             }
             
             hasTriggered = true; // Set the flag to true to indicate the event has occurred

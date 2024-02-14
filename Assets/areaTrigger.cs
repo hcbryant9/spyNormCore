@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AreaTrigger : MonoBehaviour
 {
-    public Canvas uiCanvas;
+    
     public GameObject imageRotator;
     public float rotationSpeed = 90f; // degrees per second
 
@@ -12,7 +12,7 @@ public class AreaTrigger : MonoBehaviour
 
     private void Start()
     {
-        uiCanvas.gameObject.SetActive(false);
+        imageRotator.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,7 +20,7 @@ public class AreaTrigger : MonoBehaviour
         if (other.CompareTag("Hand"))
         {
             inArea = true;
-            uiCanvas.gameObject.SetActive(true);
+            imageRotator.SetActive(true);
         }
     }
 
@@ -28,7 +28,7 @@ public class AreaTrigger : MonoBehaviour
     {
         if (other.CompareTag("Hand"))
         {
-            uiCanvas.gameObject.SetActive(false);
+            imageRotator.SetActive(false);
         }
     }
 
