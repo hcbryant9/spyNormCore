@@ -4,7 +4,7 @@ public class cabinet : MonoBehaviour
 {
     public Animator animator;
     private bool triggered = false;
-
+    public AudioController audioController;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Hand") && !triggered)
@@ -17,6 +17,7 @@ public class cabinet : MonoBehaviour
 
     private void PlayCabinetAnimation()
     {
+        audioController.PlayCabinet();
         if (animator != null)
         {
             animator.Play("cabinetAnim");

@@ -40,7 +40,19 @@ public class openDoor : MonoBehaviour
         {
             if(audioController != null)
             {
-                //audioController.PlayDoor();
+                if (gameObject.CompareTag("BigDoor"))
+                {
+                    //play the big door sfx
+                }
+                else
+                {
+                    //play the small door sfx
+                    audioController.PlayDoor();
+                }
+                
+            } else
+            {
+                Debug.Log("audio controller on door is not attached genius");
             }
             
             hasTriggered = true; // Set the flag to true to indicate the event has occurred

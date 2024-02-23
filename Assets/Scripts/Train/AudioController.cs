@@ -11,6 +11,8 @@ public class AudioController : MonoBehaviour
     public AudioClip syringe;
     public AudioClip door;
     public AudioClip bookshelf;
+    public AudioClip bigdoor;
+    public AudioClip cabinet;
     void Start()
     {
 
@@ -108,6 +110,28 @@ public class AudioController : MonoBehaviour
         else
         {
             Debug.Log("bookshelf is null");
+        }
+    }
+    public void PlayBigDoor()
+    {
+        if (bookshelf != null)
+        {
+            PlaySound(bigdoor);
+        }
+        else
+        {
+            Debug.Log("bigdoor is null");
+        }
+    }
+    public void PlayCabinet()
+    {
+        if (bookshelf != null)
+        {
+            PlaySound(cabinet);
+        }
+        else
+        {
+            Debug.Log("cabinet is null");
         }
     }
 }

@@ -18,8 +18,9 @@ public class Lock : MonoBehaviour
     public Animator cabinetAnimator;
     public Animator roomAnimator;
 
-    public GameObject briefcase;
     
+
+    public AudioController audioController;
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Get the Rigidbody component
@@ -29,21 +30,20 @@ public class Lock : MonoBehaviour
         {
             unlockedKey.SetActive(false);
         }
-        if (briefcase != null)
-        {
-            briefcase.SetActive(false);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (canTrigger && other.CompareTag("Hand"))
         {
+            //picking up key
             rb.isKinematic = true;
             coll.enabled = false;
             canTrigger = false;
             target = other.transform;
-
+            //play sound
+            audioController.PlayHeadphones();
         }
     }
     private void Update()
@@ -66,11 +66,15 @@ public class Lock : MonoBehaviour
                     lockedlock.SetActive(false);
                     gameObject.SetActive(false);
 
+
+                    //play sounds - unlock & cabinet
+                    audioController.PlayCabinet();
+
                     //animate drawer opening
                     cabinetAnimator.Play("unlockCabinet");
                     roomAnimator.Play("roomRising");
                     //play the illusion room animator rising
-                    briefcase.SetActive(true);
+                   
                     
 
                 }
