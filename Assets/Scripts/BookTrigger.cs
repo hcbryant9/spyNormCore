@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class BookTrigger : MonoBehaviour
 {
-    public Animator bookshelfAnimation;
-    public Animator bookAnimation;
-
+    public Animator bookshelfAnimation; //reference to bookshelf sliding animation
+    public Animator bookAnimation; //reference to book sliding out animation
+    public AudioController audioController; // reference to audio manager
     private bool triggered = false;
 
    
@@ -19,8 +19,9 @@ public class BookTrigger : MonoBehaviour
 
     private void PlayBookshelfAnimation()
     {
-        if (bookshelfAnimation != null && bookAnimation !=null)
+        if (bookshelfAnimation != null && bookAnimation != null && audioController != null )
         {
+            audioController.PlayBookshelf();
             bookshelfAnimation.Play("Bookshelf_Move");
             bookAnimation.Play("BookPull");
         }
