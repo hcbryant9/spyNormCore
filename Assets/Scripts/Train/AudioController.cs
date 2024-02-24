@@ -7,7 +7,6 @@ public class AudioController : MonoBehaviour
     private AudioSource playerAudioSource;
     public AudioClip headphones;
     public AudioClip briefcase;
-    public AudioClip beverage;
     public AudioClip syringe;
     public AudioClip door;
     public AudioClip bookshelf;
@@ -67,21 +66,10 @@ public class AudioController : MonoBehaviour
             Debug.Log("briefcase is null");
         }
     }
-    public void PlayBeverage()
-    {
-        if (beverage != null)
-        {
-            PlaySound(beverage);
-        }
-        else
-        {
-            Debug.Log("beverage is null");
-        }
-
-    }
+    
     public void PlaySyringe()
     {
-        if (beverage != null)
+        if (syringe != null)
         {
             PlaySound(syringe);
         }
@@ -92,7 +80,7 @@ public class AudioController : MonoBehaviour
     }
     public void PlayDoor()
     {
-        if (beverage != null)
+        if (door != null)
         {
             PlaySound(door);
         }
