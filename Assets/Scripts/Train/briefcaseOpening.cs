@@ -23,7 +23,11 @@ public class briefcaseOpening : MonoBehaviour
         briefcaseLid = this.gameObject.transform;
         initialRotation = briefcaseLid.rotation;
         targetRotation = initialRotation * Quaternion.Euler(0f, 0f, openingAngle);
-        uiCanvas.gameObject.SetActive(false);
+        if (uiCanvas != null)
+        {
+            uiCanvas.gameObject.SetActive(false);
+        }
+        
     }
 
     void Update()
