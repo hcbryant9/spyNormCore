@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Normal.Realtime;
 
 public class PlantCamera : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlantCamera : MonoBehaviour
      */
     private bool canTrigger = true;
     public GameObject spyCamera;
-
+    [SerializeField] private Realtime realtime;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class PlantCamera : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Hand") && canTrigger)
+        if(other.gameObject.CompareTag("Hand") && canTrigger && realtime.clientID != 4) //check client id to see if it is camera guy
         {
             Debug.Log("Collision");
             canTrigger = false;
