@@ -12,6 +12,7 @@ public class AudioController : MonoBehaviour
     public AudioClip bookshelf;
     public AudioClip bigdoor;
     public AudioClip cabinet;
+    public AudioClip closedoor;
     void Start()
     {
 
@@ -120,6 +121,17 @@ public class AudioController : MonoBehaviour
         else
         {
             Debug.Log("cabinet is null");
+        }
+    }
+    public void PlayClose()
+    {
+        if (closedoor != null)
+        {
+            PlaySound(closedoor);
+        }
+        else
+        {
+            Debug.Log("closedoor is null");
         }
     }
 }

@@ -40,34 +40,51 @@ public class openDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hand") && !hasTriggered)
         {
-            if (audioController != null)
-            {
-                if (gameObject.CompareTag("BigDoor"))
-                {
-                    //play the big door sfx
-                    audioController.PlayBigDoor();
-                }
-                else
-                {
-                    //play the small door sfx
-                    audioController.PlayDoor();
-                }
-
-            }
-            else
-            {
-                Debug.Log("audio controller on door is not attached genius");
-            }
-
             hasTriggered = true; 
             if (!closed)
             {
+                if (audioController != null)
+                {
+                    if (gameObject.CompareTag("BigDoor"))
+                    {
+                        //play the door close sfx
+                        audioController.PlayClose();
+                    }
+                    else
+                    {
+                        //play the door close sfx 
+                        audioController.PlayClose();
+                    }
+
+                }
+                else
+                {
+                    Debug.Log("audio controller on door is not attached genius");
+                }
                 Debug.Log("closing door");
                 Invoke("CloseDoor", 2.0f);
 
             }
             else
             {
+                if (audioController != null)
+                {
+                    if (gameObject.CompareTag("BigDoor"))
+                    {
+                        //play the big door sfx
+                        audioController.PlayBigDoor();
+                    }
+                    else
+                    {
+                        //play the small door sfx
+                        audioController.PlayDoor();
+                    }
+
+                }
+                else
+                {
+                    Debug.Log("audio controller on door is not attached genius");
+                }
                 Debug.Log("Opening door");
                 Invoke("OpenDoor", 2.0f);
             }
