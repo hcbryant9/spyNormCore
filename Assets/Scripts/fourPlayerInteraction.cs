@@ -23,7 +23,7 @@ public class fourPlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        finalRoom.SetActive(false);
+        //finalRoom.SetActive(false);
     }
     private void Update()
     {
