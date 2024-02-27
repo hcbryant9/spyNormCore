@@ -25,6 +25,26 @@ public class fourPlayerInteraction : MonoBehaviour
     {
         finalRoom.SetActive(false);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            PlayAnimation();
+        }
+    }
+    private void PlayAnimation()
+    {
+        if (animator != null)
+        {
+            finalRoom.SetActive(true);
+            animator.Play("finalDoor");
+
+        }
+
+
+
+        canPlayAnimation = false;
+    }
     void OnTriggerEnter(Collider other)
     {
         // Check if the collider is tagged as "Hand" and if it's not already in the HashSet
@@ -36,16 +56,7 @@ public class fourPlayerInteraction : MonoBehaviour
             // Check if enough unique Hand objects are inside and the trigger can be activated
             if (handsInside.Count >= hands && canTrigger)
             {
-                if (animator != null)
-                {
-                    finalRoom.SetActive(true);
-                    animator.Play("finalDoor");
-
-                }
-
-
-
-                canPlayAnimation = false;
+                PlayAnimation();
 
                 if (Time.time - lastTriggerTime > cooldownDuration)
                 {

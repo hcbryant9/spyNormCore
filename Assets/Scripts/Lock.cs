@@ -46,6 +46,13 @@ public class Lock : MonoBehaviour
             audioController.PlayHeadphones();
         }
     }
+    private void PlayAnimation()
+    {
+        //animate drawer opening
+        cabinetAnimator.Play("unlockCabinet");
+        roomAnimator.Play("roomRising");
+        //play the illusion room animator rising
+    }
     private void Update()
     {
         if (!canTrigger && target != null)
@@ -70,16 +77,17 @@ public class Lock : MonoBehaviour
                     //play sounds - unlock & cabinet
                     audioController.PlayCabinet();
 
-                    //animate drawer opening
-                    cabinetAnimator.Play("unlockCabinet");
-                    roomAnimator.Play("roomRising");
-                    //play the illusion room animator rising
-                   
-                    
+
+                    PlayAnimation();
+
 
                 }
                 
             }
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            PlayAnimation();
         }
     }
 }

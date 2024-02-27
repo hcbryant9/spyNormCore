@@ -44,21 +44,29 @@ public class FlashDrive : MonoBehaviour
             transform.rotation = driveTarget.rotation;
 
             // Check if Button One is pressed
-            if (OVRInput.GetDown(OVRInput.Button.One) && !buttonOnePressed)
+            if ((OVRInput.GetDown(OVRInput.Button.One) && !buttonOnePressed))
             {
-                buttonOnePressed = true;
-
-                // Hide the item
-                gameObject.SetActive(false);
-                drive.SetActive(true);
-
-                // Rotate Light
-                animator.Play("rotateLight");
+                playAnimation();
                 
             }
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            playAnimation();
         }
     }
     
     
+    private void playAnimation()
+    {
+        Debug.Log("animating red light");
+        buttonOnePressed = true;
 
+        // Hide the item
+        gameObject.SetActive(false);
+        drive.SetActive(true);
+
+        // Rotate Light
+        animator.Play("rotateLight");
+    }
 }
