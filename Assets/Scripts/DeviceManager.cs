@@ -11,7 +11,7 @@ public class DeviceManager : MonoBehaviour
     public SimpleMove simpleMove;
     public OVRPlayerController ovrPlayerController;
 
-    public ChangeAvatarCollision changeAvatarCollision;
+    
     void Start()
     {
         // Check if XR settings are supported
@@ -22,6 +22,7 @@ public class DeviceManager : MonoBehaviour
             _isComputer = false;
             ovrPlayerController.enabled = true;
             simpleMove.enabled = false;
+            ovrPlayerController.SetMoveScaleMultiplier(.2f);
         }
         else
         {
@@ -30,7 +31,7 @@ public class DeviceManager : MonoBehaviour
             _isComputer = true;
             ovrPlayerController.enabled = false;
             simpleMove.enabled = true;
-            changeAvatarCollision.ConfigurationofAvatar();
+            
         }
     }
 
@@ -43,6 +44,16 @@ public class DeviceManager : MonoBehaviour
             {
                 // Teleport the player to the location of the teleport target
                 TeleportPlayer();
+            }
+        }
+        if (!_isComputer)
+        {
+            if (OVRInput.Get(OVRInput.Button.Four))
+            {
+                ovrPlayerController.SetMoveScaleMultiplier(.5f);
+            } else if (OVRInput.Get(OVRInput.Button.Three))
+            {
+                ovrPlayerController.SetMoveScaleMultiplier(.2f);
             }
         }
     }
