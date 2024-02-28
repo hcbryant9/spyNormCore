@@ -76,7 +76,7 @@ public class ChangeAvatarCollision : MonoBehaviour
 
 
 
-    private void ConfigurationofAvatar()
+    public void ConfigurationofAvatar()
     {
        
             //logic for player 1

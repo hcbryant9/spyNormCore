@@ -10,6 +10,8 @@ public class DeviceManager : MonoBehaviour
 
     public SimpleMove simpleMove;
     public OVRPlayerController ovrPlayerController;
+
+    public ChangeAvatarCollision changeAvatarCollision;
     void Start()
     {
         // Check if XR settings are supported
@@ -28,6 +30,7 @@ public class DeviceManager : MonoBehaviour
             _isComputer = true;
             ovrPlayerController.enabled = false;
             simpleMove.enabled = true;
+            changeAvatarCollision.ConfigurationofAvatar();
         }
     }
 
