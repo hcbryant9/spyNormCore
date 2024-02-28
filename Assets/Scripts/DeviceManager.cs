@@ -50,7 +50,7 @@ public class DeviceManager : MonoBehaviour
         {
             if (OVRInput.Get(OVRInput.Button.Four))
             {
-                ovrPlayerController.SetMoveScaleMultiplier(.5f);
+                ovrPlayerController.SetMoveScaleMultiplier(1f);
             } else if (OVRInput.Get(OVRInput.Button.Three))
             {
                 ovrPlayerController.SetMoveScaleMultiplier(.2f);
