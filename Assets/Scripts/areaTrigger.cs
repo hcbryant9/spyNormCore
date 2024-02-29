@@ -20,7 +20,7 @@ public class AreaTrigger : MonoBehaviour
         if (other.CompareTag("Hand"))
         {
             inArea = true;
-            imageRotator.SetActive(true);
+            //imageRotator.SetActive(true);
         }
     }
 
