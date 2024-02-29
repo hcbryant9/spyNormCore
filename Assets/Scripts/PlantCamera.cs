@@ -40,5 +40,11 @@ public class PlantCamera : MonoBehaviour
             canTrigger = false;
             spyCamera.SetActive(true);
         }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            Debug.Log("Collision");
+            canTrigger = true;
+            spyCamera.SetActive(false);
+        }
     }
 }
