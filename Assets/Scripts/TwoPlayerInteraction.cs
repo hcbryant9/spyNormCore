@@ -47,7 +47,17 @@ public class TwoPlayerInteraction : MonoBehaviour
             }
         }
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            door.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            door.SetActive(false);
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         // Check if the collider is tagged as "Hand" and if it's in the HashSet
